@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: hsl(216, 12%, 8%);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rating-card {
+    background-color: hsl(213, 19%, 18%);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 18vw;
+    gap: 20px;
+}
+
+.star-icon {
+    display: flex;
+}
+
+.avaliation-text {
+    color: hsl(0, 0%, 100%);
+}
+
+.avaliation-text p {
+    color: hsl(0, 0%, 75%);
+}
+
+.rating-opts {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.rating-opts button {
+    padding: 12px;
+    border: none;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+}
