@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&family=Roboto:wght@400;900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -10,6 +12,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: 'Overpass', sans-serif;
 }
 
 .rating-card {
@@ -19,7 +22,7 @@ body {
     flex-direction: column;
     justify-content: center;
     width: 18vw;
-    gap: 20px;
+    gap: 30px;
     border-radius: 30px;
 }
 
@@ -28,8 +31,8 @@ body {
     padding: 14px;
     background-color: hsl(216, 12%, 54%);
     border-radius: 50%;
-    height: 15px;
-    width: 15px;
+    height: 18px;
+    width: 18px;
 }
 
 .avaliation-text {
@@ -37,27 +40,37 @@ body {
 }
 
 .avaliation-text p {
+    margin-top: 10px;
     color: hsl(0, 0%, 75%);
+    font-size: 11pt;
+}
+
+.avaliation-text h1 {
+    font-size: 21pt;
 }
 
 .rating-opts {
     display: flex;
-    justify-content: center;
-    gap: 25px;
+    justify-content: space-between;
 }
 
 .rating-opts button {
     padding: 13px;
     border: none;
     border-radius: 50%;
-    height: 38px;
-    width: 38px;
+    height: 45px;
+    width: 45px;
+    font-weight: 700;
+    
 }
 
 .submit-btn {
     border: none;
-    padding: 12px;
-    border-radius: 20px;
+    padding: 14px;
+    border-radius: 25px;
     background-color: hsl(25, 97%, 53%);
+    letter-spacing: 2.5px;
+    font-weight: 700;
+    color: hsl(0, 0%, 100%);
 }
 
