@@ -50,9 +50,13 @@ body {
     font-size: 21pt;
 }
 
-.rating-opts {
+.rating-opts ul {
     display: flex;
     justify-content: space-between;
+}
+
+.rating-opts ul li {
+    list-style: none;
 }
 
 .rating-opts button {
