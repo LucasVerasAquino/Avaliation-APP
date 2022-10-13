@@ -20,7 +20,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 20vw;
+    width: 380px;
     gap: 29px;
     border-radius: 30px;
     background-image: radial-gradient(
@@ -29,6 +29,7 @@ body {
         hsl(216, 12%, 12%) 320px
     );
     box-sizing: border-box;
+    display: none;
 }
 
 .star-icon img {
@@ -99,4 +100,47 @@ body {
 .rating-btn.selected {
     background-color: hsl(216, 12%, 60%);
     color: white;
+}
+
+/*  FEEDBACK-CARD */
+.feedback-card {
+    padding: 40px 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 380px;
+    gap: 29px;
+    border-radius: 30px;
+    background-image: radial-gradient(
+        circle 200px at top,
+        hsl(213, 19%, 18%) 10px,
+        hsl(216, 12%, 12%) 320px
+    );
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.rate-text {
+    background-color: hsl(213, 19%, 18%);
+    padding: 6px 20px;
+    border-radius: 20px;
+    color: hsla(25, 97%, 59%, 0.9);
+    text-align: center;
+    font-size: 10.6pt;
+}
+
+.feedback-card-text {
+    color: rgb(255, 255, 255);
+}
+
+.feedback-card-text > h1 {
+    margin-bottom: 16px;
+    font-size: 20pt;
+}
+
+.feedback-card-text > p {
+    color: rgba(255, 255, 255, 0.55);
+    margin-bottom: 8px;
+    font-size: 10.5pt;
 }
