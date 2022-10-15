@@ -109,7 +109,7 @@ body {
     justify-content: center;
     align-items: center;
     width: 390px;
-    gap: 29px;
+    gap: 28px;
     border-radius: 30px;
     background-image: radial-gradient(
         circle 200px at top,
@@ -138,7 +138,7 @@ body {
 }
 
 .feedback-card-text > h1 {
-    margin-bottom: 16px;
+    margin-bottom: 14px;
     font-size: 20pt;
 }
 
