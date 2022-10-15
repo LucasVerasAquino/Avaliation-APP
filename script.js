@@ -1,9 +1,10 @@
-const ratingOptionsParent = document.querySelector(".rating-opts");
+const ratingCard = document.querySelector(".rating-card");
+const ratingFeedback = document.querySelector(".feedback-card");
 const ratingOptions = document.querySelectorAll(".rating-btn");
 const submitButton = document.querySelector(".submit-btn");
+const rateFeedbackText = document.querySelector(".rate-text");
 
-//Selecionar uma nota
-//Fazer um loop para checar cada uma das rating opts
+//Fazer um loop para adicionar o eventListener em todos os botões de avaliação
 const SelectingRateOption = () => {
     for (const rate of ratingOptions) {
         rate.addEventListener("click", selectRate);
@@ -16,7 +17,7 @@ const selectRate = (e) => {
     const clickedOption = e.target;
 
     //Checando se alguma opção já está selecionada, e se estiver remover a seleção
-    if (checkIfIsSelected) {
+    if (checkIfIsSelected()) {
         for (const rate of ratingOptions) {
             rate.classList.remove("selected");
         }
@@ -26,22 +27,23 @@ const selectRate = (e) => {
     clickedOption.classList.add("selected");
 };
 
-//Alguma nota está selecionada?
+//Loop para verificar se alguma nota está selecionada
 const checkIfIsSelected = () => {
-    const isSelected = () => {
-        for (const rate of ratingOptions) {
-            return rate.classList.contains("selected");
+    for (const rate of ratingOptions) {
+        //Se alguma opção já estiver selecionada retornar true
+        if (rate.className === "rating-btn selected") {
+            return true;
         }
-    };
+    }
 };
 
-//Pegando o ID da opção selecionada
+//Pegando o ID da opção selecionada para mostrar ao usuário qual opção ele selecionou
 const getSelectedRate = () => {
-    if (checkIfIsSelected) {
+    if (checkIfIsSelected()) {
         for (const rate of ratingOptions) {
+            //Se alguma opção estiver selecionada retornar o atributo "ID" do mesmo
             if (rate.className === "rating-btn selected") {
-                const selectRateOptionValue = rate.getAttribute("id");
-                return selectRateOptionValue;
+                return rate.getAttribute("id");
             }
         }
     }
@@ -49,10 +51,10 @@ const getSelectedRate = () => {
 
 //Enviar formulário com o botão submit se alguma opção estiver selecionada
 const submitRate = () => {
-    if (checkIfIsSelected) {
-        //Trocar a visibilidade dos cards
-        //Inserir o texto de avaliação
-        //Subir erro caso nenhuma opção esteja selecionada
+    if (checkIfIsSelected()) {
+        ratingCard.style.display = "none";
+        ratingFeedback.style.display = "flex";
+        rateFeedbackText.innerText = `You selected ${getSelectedRate()} out of 5`;
     }
 };
 
